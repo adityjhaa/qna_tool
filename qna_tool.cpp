@@ -650,8 +650,8 @@ Node* QNA_tool::get_top_k_para(string question, int k)
 
 void QNA_tool::query(string question, string filename){
     // Implement your function here  
-    std::cout << "Q: " << question << std::endl;
-    query_llm(filename, get_top_k_para(question,5), 5 , "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", question);
+    std::cout << "Q: " << question<<endl <<endl;
+    query_llm(filename, get_top_k_para(question,5), 5 , "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", question);
 
     return;
 }
@@ -794,6 +794,7 @@ void QNA_tool::query_llm(string filename, Node* root, int k, string API_KEY, str
     ofstream outfile("query.txt");
     outfile << "These are the excerpts from Mahatma Gandhi's books.\nOn the basis of this, ";
     outfile << question<<endl;
+    outfile << "Use the given excerpts only to answer in 150-200 words in a single paragraph.";
     // You can add anything here - show all your creativity and skills of using ChatGPT
     
     outfile.close();

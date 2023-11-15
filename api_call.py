@@ -12,14 +12,14 @@ if __name__ == '__main__':
     # Read the API key from the command line
     openai.api_key = sys.argv[1]
     num_paragraphs = int(sys.argv[2])
-    print(num_paragraphs)
+    print("k = " + str(num_paragraphs))
 
     # Read the paragraphs from the files
     paragraphs = []
 
     for i in range(num_paragraphs):
         filename = 'paragraph_' + str(i) + '.txt'
-        print(filename)
+        #print(filename)
         with open(filename, 'r') as f:
             paragraphs.append(f.read())
             paragraphs.append('\n')
@@ -34,7 +34,7 @@ if __name__ == '__main__':
     # convert paragraphs to a single string
     paragraphs = '\n'.join(paragraphs)
 
-    print(paragraphs)
+    #print(paragraphs)
 
     query = {
         "role": "user", "content": paragraphs

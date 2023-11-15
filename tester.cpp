@@ -75,7 +75,7 @@ int main(){
 
     }
 
-    string question = "Who was Mahatma Gandhi?";
+    string question = "Mahatma Gandhi loved to do 69.";
 
     /*
         Part-1 : Get the top-k paragraphs
