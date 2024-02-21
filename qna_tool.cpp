@@ -651,7 +651,7 @@ Node* QNA_tool::get_top_k_para(string question, int k)
 void QNA_tool::query(string question, string filename){
     // Implement your function here  
     std::cout << "Q: " << question<<endl <<endl;
-    query_llm(filename, get_top_k_para(question,5), 5 , "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", question);
+    query_llm(filename, get_top_k_para(question,5), 5 , "/*your api key for openai*/", question);
 
     return;
 }
